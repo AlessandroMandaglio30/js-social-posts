@@ -71,21 +71,21 @@ function construzionePost() {
 function inserisciPost(iPost) {
     const container = document.getElementById('container');
     container.innerHTML +=
-        ` <div class="post">
+        `<div class="post">
             <div class="post__header">
-                <div class="post-meta">                    
+                <div class="post-meta">
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src=${iPost.media} alt=${iPost.author["name"]}>                    
+                        <img class="profile-pic" src=${iPost.author["image"]}>
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${iPost.author["name"]}</div>
                         <div class="post-meta__time">4 mesi fa</div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
             <div class="post__text">${iPost.content}</div>
             <div class="post__image">
-                <img src=${iPost.author["image"]} alt="">
+                <img src=${iPost.media} alt="">
             </div>
             <div class="post__footer">
                 <div class="likes js-likes">
@@ -98,9 +98,11 @@ function inserisciPost(iPost) {
                     <div class="likes__counter">
                         Piace a <b id="like-counter-1" class="js-likes-counter">${iPost.likes}</b> persone
                     </div>
-                </div> 
-            </div>            
+                </div>
+            </div>
         </div>`
 }
 
 console.log(posts);
+
+
